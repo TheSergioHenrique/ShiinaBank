@@ -1,0 +1,17 @@
+
+public class CriaConta {
+	public static void main(String[] args) {
+		 Conta primeiraConta =new Conta();
+		 primeiraConta.saldo = 200;
+		 primeiraConta.titular = "Shiina!";
+		 primeiraConta.saldo += 100;
+		 primeiraConta.agencia = 146;
+		
+		 Conta segundaConta = new Conta();
+		 segundaConta.saldo += 140;
+	
+		 
+			System.out.println("Na primeira conta a agência é " + primeiraConta.agencia + ".");
+			System.out.println("Na segunda conta a agencia é " + segundaConta.agencia +".");
+	}
+}
