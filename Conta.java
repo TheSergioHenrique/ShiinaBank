@@ -8,12 +8,28 @@ public class Conta {
 		this.saldo += valor;
 	}
 	
+	
 	public boolean saca(double valor) {
 		if(this.saldo >= valor) {
 			this.saldo -= valor;
 			return true;
-		}else{
+		}
+		else {
 			System.out.println("O saldo na conta é insuficiente para esta transação!");
+			return false;
+		}
+		
+	}
+	
+
+	public boolean transfere(double valor, Conta destino) {
+		if(this.saldo>=valor) {
+			this.saldo -= valor;
+			destino.deposita(valor);
+			return true;
+			
+		}else{
+			System.out.println("Impossivel!");
 			return false;
 		}
 	}
